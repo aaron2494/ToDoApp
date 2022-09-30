@@ -19,10 +19,24 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
-        return (new Docket(DocumentationType.SWAGGER_2)).select().apis(RequestHandlerSelectors.basePackage("com.todoapp.todoapp.controller")).paths(PathSelectors.any()).build().apiInfo(this.apiInfo());
+        return (new Docket(DocumentationType.SWAGGER_2))
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.todoapp.todoapp.controller"))
+                .paths(PathSelectors.any())
+                .build()
+                .apiInfo(this.apiInfo());
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfo("Todo API", "La API REST de ToDo App.", "v1", "Terms of service", new Contact("SACAViX Tech", "www.example.com", "myeaddress@company.com"), "License of API", "API license URL", Collections.emptyList());
+        return new ApiInfo("GORDOAPIRESTFULLGORDO",
+                "La API REST de ToDo App.",
+                "v1",
+                "Terms of service",
+                new Contact("SACAViX Tech",
+                        "www.example.com",
+                        "myeaddress@company.com"),
+                        "License of API",
+                        "API license URL",
+                        Collections.emptyList());
     }
 }
